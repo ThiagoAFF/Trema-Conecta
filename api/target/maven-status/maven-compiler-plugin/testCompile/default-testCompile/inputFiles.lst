@@ -1,0 +1,16 @@
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/GerarSenha.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/api/ApiApplicationTests.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/AuthLogoutSecurityTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/CookieAuthIsolationTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/CsrfSecurityTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/JwtConfigTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/JwtCsrfIntegrationTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/config/SecurityConfigTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/controller/LoteControllerTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/controller/MovimentacaoControllerTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/service/CadastroEmpresaServiceTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/service/ClienteServiceTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/service/JwtCookieServiceTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/service/PedidoServiceTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/validation/CadastroNormalizerTest.java
+/home/thiagoaff/Documentos/Programação/Trama-Conecta-V5.1/api/src/test/java/br/com/conexaoteia/validation/CnpjValidatorTest.java

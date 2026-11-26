@@ -1,0 +1,16 @@
+br/com/conexaoteia/service/PedidoServiceTest.class
+br/com/conexaoteia/validation/CnpjValidatorTest.class
+br/com/conexaoteia/config/CsrfSecurityTest.class
+br/com/conexaoteia/service/CadastroEmpresaServiceTest.class
+br/com/conexaoteia/config/SecurityConfigTest.class
+br/com/conexaoteia/config/AuthLogoutSecurityTest.class
+br/com/conexaoteia/config/JwtCsrfIntegrationTest.class
+br/com/conexaoteia/config/JwtConfigTest.class
+br/com/conexaoteia/controller/MovimentacaoControllerTest.class
+br/com/conexaoteia/validation/CadastroNormalizerTest.class
+br/com/conexaoteia/GerarSenha.class
+br/com/conexaoteia/service/JwtCookieServiceTest.class
+br/com/conexaoteia/api/ApiApplicationTests.class
+br/com/conexaoteia/controller/LoteControllerTest.class
+br/com/conexaoteia/service/ClienteServiceTest.class
+br/com/conexaoteia/config/CookieAuthIsolationTest.class
