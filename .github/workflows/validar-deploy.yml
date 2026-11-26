@@ -1,0 +1,57 @@
+name: Validar Trama Conecta V5.1
+
+on:
+  push:
+    branches:
+      - deploy/v5-1
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend React / Vite
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Instalar dependencias
+        run: npm ci --no-audit --no-fund
+        working-directory: frontend
+      - name: Validar contratos basicos
+        run: node VERIFICAR-CONTRATOS.mjs
+      - name: Compilar frontend
+        run: npm run build
+        working-directory: frontend
+
+  api:
+    name: API Spring Boot / Java 25
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Java 25 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+          cache-dependency-path: api/pom.xml
+      - name: Normalizar Maven Wrapper
+        run: sed -i 's/\r$//' mvnw && chmod +x mvnw
+        working-directory: api
+      - name: Compilar a API
+        run: ./mvnw -B -ntp -DskipTests package
+        working-directory: api
