@@ -1,0 +1,28 @@
+# Blueprint for Spring Boot backend; frontend is hosted on Cloudflare Pages.
+services:
+  - type: web
+    name: trama-conecta-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: ./api
+    healthCheckPath: /auth/csrf
+    envVars:
+      - key: SERVER_PORT
+        value: "10000"
+      - key: JAVA_TOOL_OPTIONS
+        value: "-XX:MaxRAMPercentage=65 -XX:ActiveProcessorCount=2 -Xss512k"
+      - key: SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE
+        value: "3"
+      - key: SPRING_DATASOURCE_HIKARI_MAX_LIFETIME
+        value: "240000"
+      - key: APP_AUTH_COOKIE_SECURE
+        value: "true"
+      - key: DB_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false

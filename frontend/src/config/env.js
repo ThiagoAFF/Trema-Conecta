@@ -1,10 +1,11 @@
-// Configuração central de ambiente. Nenhum outro arquivo lê import.meta.env diretamente.
-const API_URL = (import.meta.env.VITE_API_URL || '').trim().replace(/\/+$/, '');
-const forceDemo = String(import.meta.env.VITE_DEMO_MODE ?? '').trim().toLowerCase() === 'true';
+// Frontend uses the Vite proxy in development and Pages Function at /api in production.
+const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : ''))
+  .trim().replace(/\/+$/, '');
+const forceDemo = String(import.meta.env.VITE_DEMO_MODE ?? '')
+  .trim().toLowerCase() === 'true';
 
 export const env = {
   API_URL,
-  // Modo real é o padrão. Demonstração somente se VITE_DEMO_MODE=true.
   DEMO_MODE: forceDemo,
   HERO_IMAGE_URL:
     import.meta.env.VITE_HERO_IMAGE_URL ||
